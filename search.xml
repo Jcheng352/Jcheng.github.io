@@ -4,14 +4,73 @@
   
     
     <entry>
-      <title>博客更新日志</title>
-      <link href="/2024/09/27/%E5%8D%9A%E5%AE%A2/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
-      <url>/2024/09/27/%E5%8D%9A%E5%AE%A2/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
+      <title>近况记事-1</title>
+      <link href="/2024/09/28/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%BF%91%E5%86%B5%E8%AE%B0%E4%BA%8B-1/"/>
+      <url>/2024/09/28/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%BF%91%E5%86%B5%E8%AE%B0%E4%BA%8B-1/</url>
       
-        <content type="html"><![CDATA[<p>记录本博客的更新情况</p><h1 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h1><h1 id="9-27"><a href="#9-27" class="headerlink" title="9.27"></a>9.27</h1><ol><li>将图库、音乐、链接折叠到生活类</li><li>新增图库页面（不能显示图片&#x2F;待解决）</li></ol><h1 id="9-26"><a href="#9-26" class="headerlink" title="9.26"></a>9.26</h1><ol><li>博客基础配置更改</li><li>新增全局音乐播放卡片</li><li>新增头像、主页图、社交图标(微信、QQ)展示</li><li>增加文章过期提醒</li><li>增加博客年份设置</li><li>增加博客运行时间</li></ol>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
+          
+          <category> 生活随笔 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学习遇到的问题及解决方法</title>
+      <link href="/2024/09/28/%E5%AD%A6%E4%B9%A0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+      <url>/2024/09/28/%E5%AD%A6%E4%B9%A0%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Q：如何快速获取网站图标"><a href="#Q：如何快速获取网站图标" class="headerlink" title="Q：如何快速获取网站图标"></a>Q：如何快速获取网站图标</h1><p>参考资料</p><blockquote><p><a href="https://zhuanlan.zhihu.com/p/608661725">https://zhuanlan.zhihu.com/p/608661725</a></p></blockquote><details class="toggle"><summary class="toggle-button" style>展开查看详情</summary><div class="toggle-content"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">通过网址获取</span><br><span class="line">通过官网链接加上/favicon.ico，可以快速获得一个网站的图标，比如：</span><br><span class="line"></span><br><span class="line">1、获取百度图标：https://www.baidu.com/favicon.ico</span><br><span class="line"></span><br><span class="line">2、获取谷歌图标：https://www.google.com/favicon.ico</span><br><span class="line"></span><br><span class="line">2、获取知乎图标：https://static.zhihu.com/heifetz/favicon.ico</span><br><span class="line"></span><br><span class="line">通过接口获取</span><br><span class="line">1、开放接口：https://api.iowen.cn/favicon</span><br><span class="line"></span><br><span class="line">获取百度图标：https://api.iowen.cn/favicon/www.baidu.com.png</span><br><span class="line"></span><br><span class="line">获取谷歌图标：https://api.iowen.cn/favicon/www.google.com.png</span><br><span class="line"></span><br><span class="line">通过上面的开放接口可以获取一个网站的图标，其使用方式就是在接口链接后加上需要获取图标的URL地址，同时要注意确保URL能够正常打开，而且不需要 http(s):// 前缀，且结尾必须填 .png。</span><br><span class="line"></span><br><span class="line">2、开放接口：https://www.google.com/s2/favicons?sz=64&amp;domain=</span><br><span class="line"></span><br><span class="line">获取知乎图标：https://www.google.com/s2/favicons?sz=64&amp;domain=zhihu.com</span><br><span class="line"></span><br><span class="line">获取百度图标：https://www.google.com/s2/favicons?sz=64&amp;domain=baidu.com</span><br><span class="line"></span><br><span class="line">通过上面的开放接口可以获取一个网站的图标，其使用方式就是在接口链接后加上需要获取图标的URL地址，同时要注意确保URL能够正常打开，而且不需要 http(s)://www. 前缀。</span><br><span class="line"></span><br><span class="line">通过图标网站</span><br><span class="line">1、FontAwesome图标网站：https://fontawesome.com/</span><br><span class="line"></span><br><span class="line">2、爱给素材图标网站：https://www.aigei.com/</span><br><span class="line"></span><br><span class="line">3、IconFont图标网站：https://www.iconfont.cn/</span><br></pre></td></tr></table></figure></div></details>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 问题解决 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>软件测试竞赛</title>
+      <link href="/2024/09/28/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AB%9E%E8%B5%9B/"/>
+      <url>/2024/09/28/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AB%9E%E8%B5%9B/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客更新日志</title>
+      <link href="/2024/09/27/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
+      <url>/2024/09/27/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
+      
+        <content type="html"><![CDATA[<p>记录本博客的更新情况</p><h1 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h1><h1 id="9-28"><a href="#9-28" class="headerlink" title="9.28"></a>9.28</h1><ol><li>新增网址收藏的网页头像图片</li><li>网址收藏页面新增链接</li><li>文章新增折叠框功能</li></ol><h1 id="9-27"><a href="#9-27" class="headerlink" title="9.27"></a>9.27</h1><ol><li>将图库、音乐、链接折叠到生活类</li><li>新增图库页面（不能显示图片&#x2F;待解决）</li></ol><h1 id="9-26"><a href="#9-26" class="headerlink" title="9.26"></a>9.26</h1><ol><li>博客基础配置更改</li><li>新增全局音乐播放卡片</li><li>新增头像、主页图、社交图标(微信、QQ)展示</li><li>增加文章过期提醒</li><li>增加博客年份设置</li><li>增加博客运行时间</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客相关 </category>
           
           <category> 更新日志 </category>
           
@@ -22,7 +81,7 @@
             
             <tag> hexo </tag>
             
-            <tag> 教程 </tag>
+            <tag> 更新日志 </tag>
             
         </tags>
       
@@ -32,15 +91,15 @@
     
     <entry>
       <title>博客创建过程</title>
-      <link href="/2024/09/26/%E5%8D%9A%E5%AE%A2/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
-      <url>/2024/09/26/%E5%8D%9A%E5%AE%A2/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B/</url>
+      <link href="/2024/09/26/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+      <url>/2024/09/26/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p>记录建立个人博客所用到的教程文档、流程顺序。<br>2024.9.25 下载notejs、git，注册github<br>2024.9.26 成功搭建hexo博客<br>2024.9.27 博客美化改进完成</p><h1 id="hexo-GitHub博客搭建"><a href="#hexo-GitHub博客搭建" class="headerlink" title="hexo+GitHub博客搭建"></a>hexo+GitHub博客搭建</h1><p>参考教程</p><blockquote><p>B站视频：<a href="https://www.bilibili.com/video/BV1Ju4m1c7WR/">https://www.bilibili.com/video/BV1Ju4m1c7WR/</a></p></blockquote><p>博客链接：</p><blockquote><p><a href="https://blog.fiveth.cc/p/bb32/">如何用Hexo搭建个人博客?</a></p></blockquote><blockquote><p><a href="https://blog.fiveth.cc/p/138e/">Hexo搭建进阶：Vercel部署、主题安装、基础用法</a></p></blockquote><p>hexo官方文档</p><blockquote><p><a href="https://hexo.io/zh-cn/docs/">点击文字直达</a></p></blockquote><h1 id="butterfly美化"><a href="#butterfly美化" class="headerlink" title="butterfly美化"></a>butterfly美化</h1><h2 id="下载以及简单配置"><a href="#下载以及简单配置" class="headerlink" title="下载以及简单配置"></a>下载以及简单配置</h2><blockquote><p><a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 安装文档(一) 快速开始</a></p></blockquote><blockquote><p><a href="https://butterfly.js.org/posts/dc584b87/">Butterfly 安装文档(二) 主题页面</a></p></blockquote><h2 id="博客美化"><a href="#博客美化" class="headerlink" title="博客美化"></a>博客美化</h2><h3 id="butterfly-官方博客图文版："><a href="#butterfly-官方博客图文版：" class="headerlink" title="butterfly 官方博客图文版："></a>butterfly 官方博客图文版：</h3><blockquote><p><a href="https://butterfly.js.org/posts/4aa8abbe/">Butterfly 安装文档(三) 主题配置-1</a></p></blockquote><blockquote><p><a href="https://butterfly.js.org/posts/ceeb73f/">Butterfly 安装文档(四) 主题配置-2</a></p></blockquote><h3 id="全局音乐设置"><a href="#全局音乐设置" class="headerlink" title="全局音乐设置"></a>全局音乐设置</h3><blockquote><p><a href="https://butterfly.js.org/posts/4073eda">Butterfly 安装文档(六) 进阶教程</a></p></blockquote><blockquote><p><a href="https://butterfly.js.org/posts/507c070f/">Butterfly添加全局吸底Aplayer教程</a></p></blockquote><p>还包含 电影、说说、自定义代码配色、自定义侧边栏、添加全局吸底Aplayer教程、Icon</p><h3 id="文章页面美化"><a href="#文章页面美化" class="headerlink" title="文章页面美化"></a>文章页面美化</h3><blockquote><p><a href="https://butterfly.js.org/posts/ceeb73f/#%E9%A0%81%E9%9D%A2%E7%BE%8E%E5%8C%96">点击文字直达</a></p></blockquote><h3 id="页面加载动画-preloader"><a href="#页面加载动画-preloader" class="headerlink" title="页面加载动画 preloader"></a>页面加载动画 preloader</h3><blockquote><p><a href="https://butterfly.js.org/posts/ceeb73f/#%E9%A0%81%E9%9D%A2%E5%8A%A0%E8%BC%89%E5%8B%95%E7%95%AB-preloader">点击文字直达</a></p></blockquote><h3 id="进阶功能教程"><a href="#进阶功能教程" class="headerlink" title="进阶功能教程"></a>进阶功能教程</h3><p><a href="https://blog.imzjw.cn/posts/bfdocs/">Hexo-Butterfly 主题参考手册</a></p><blockquote><p>包括标签外挂、链接卡片、按钮等</p></blockquote><h3 id="标签图标网站"><a href="#标签图标网站" class="headerlink" title="标签图标网站"></a>标签图标网站</h3><blockquote><p><a href="https://fontawesome.com/icons">fontawesome</a></p></blockquote><p>随机壁纸API汇总</p><blockquote><p><a href="https://www.fomal.cc/posts/489d3914.html">https://www.fomal.cc/posts/489d3914.html</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>记录建立个人博客所用到的教程文档、流程顺序。<br>2024.9.25 下载notejs、git，注册github<br>2024.9.26 成功搭建hexo博客<br>2024.9.27 博客美化改进完成</p><h1 id="hexo-GitHub博客搭建"><a href="#hexo-GitHub博客搭建" class="headerlink" title="hexo+GitHub博客搭建"></a>hexo+GitHub博客搭建</h1><p>参考教程</p><blockquote><p>B站视频：<a href="https://www.bilibili.com/video/BV1Ju4m1c7WR/">https://www.bilibili.com/video/BV1Ju4m1c7WR/</a></p></blockquote><p>博客链接：</p><blockquote><p><a href="https://blog.fiveth.cc/p/bb32/">如何用Hexo搭建个人博客?</a></p></blockquote><blockquote><p><a href="https://blog.fiveth.cc/p/138e/">Hexo搭建进阶：Vercel部署、主题安装、基础用法</a></p></blockquote><p>hexo官方文档</p><blockquote><p><a href="https://hexo.io/zh-cn/docs/">点击文字直达</a></p></blockquote><h1 id="butterfly美化"><a href="#butterfly美化" class="headerlink" title="butterfly美化"></a>butterfly美化</h1><h2 id="下载以及简单配置"><a href="#下载以及简单配置" class="headerlink" title="下载以及简单配置"></a>下载以及简单配置</h2><blockquote><p><a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 安装文档(一) 快速开始</a></p></blockquote><blockquote><p><a href="https://butterfly.js.org/posts/dc584b87/">Butterfly 安装文档(二) 主题页面</a></p></blockquote><h2 id="博客美化"><a href="#博客美化" class="headerlink" title="博客美化"></a>博客美化</h2><h3 id="butterfly-官方博客图文版："><a href="#butterfly-官方博客图文版：" class="headerlink" title="butterfly 官方博客图文版："></a>butterfly 官方博客图文版：</h3><blockquote><p><a href="https://butterfly.js.org/posts/4aa8abbe/">Butterfly 安装文档(三) 主题配置-1</a></p></blockquote><blockquote><p><a href="https://butterfly.js.org/posts/ceeb73f/">Butterfly 安装文档(四) 主题配置-2</a></p></blockquote><h3 id="全局音乐设置"><a href="#全局音乐设置" class="headerlink" title="全局音乐设置"></a>全局音乐设置</h3><blockquote><p><a href="https://butterfly.js.org/posts/4073eda">Butterfly 安装文档(六) 进阶教程</a></p></blockquote><blockquote><p><a href="https://butterfly.js.org/posts/507c070f/">Butterfly添加全局吸底Aplayer教程</a></p></blockquote><p>还包含 电影、说说、自定义代码配色、自定义侧边栏、添加全局吸底Aplayer教程、Icon</p><h3 id="文章页面美化"><a href="#文章页面美化" class="headerlink" title="文章页面美化"></a>文章页面美化</h3><blockquote><p><a href="https://butterfly.js.org/posts/ceeb73f/#%E9%A0%81%E9%9D%A2%E7%BE%8E%E5%8C%96">点击文字直达</a></p></blockquote><h3 id="页面加载动画-preloader"><a href="#页面加载动画-preloader" class="headerlink" title="页面加载动画 preloader"></a>页面加载动画 preloader</h3><blockquote><p><a href="https://butterfly.js.org/posts/ceeb73f/#%E9%A0%81%E9%9D%A2%E5%8A%A0%E8%BC%89%E5%8B%95%E7%95%AB-preloader">点击文字直达</a></p></blockquote><h3 id="进阶功能教程"><a href="#进阶功能教程" class="headerlink" title="进阶功能教程"></a>进阶功能教程</h3><p><a href="https://blog.imzjw.cn/posts/bfdocs/">Hexo-Butterfly 主题参考手册</a><br><a href="https://akilar.top/posts/615e2dec/">Tag Plugins Plus</a></p><blockquote><p>包括标签外挂、链接卡片、按钮等</p></blockquote><h3 id="标签图标网站"><a href="#标签图标网站" class="headerlink" title="标签图标网站"></a>标签图标网站</h3><blockquote><p><a href="https://fontawesome.com/icons">fontawesome</a></p></blockquote><p>随机壁纸API汇总</p><blockquote><p><a href="https://www.fomal.cc/posts/489d3914.html">https://www.fomal.cc/posts/489d3914.html</a></p></blockquote>]]></content>
       
       
       <categories>
           
-          <category> 教程 </category>
+          <category> 博客相关 </category>
           
       </categories>
       
@@ -59,12 +118,24 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="/2024/09/24/%E5%8D%9A%E5%AE%A2/hello-world/"/>
-      <url>/2024/09/24/%E5%8D%9A%E5%AE%A2/hello-world/</url>
+      <link href="/2024/09/24/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/hello-world/"/>
+      <url>/2024/09/24/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3%E5%90%88%E9%9B%86/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> 博客相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
