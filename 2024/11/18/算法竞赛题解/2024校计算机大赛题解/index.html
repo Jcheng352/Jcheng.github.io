@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2024校计算机大赛题解 | Jcheng's Blog</title><meta name="author" content="Jcheng"><meta name="copyright" content="Jcheng"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="比赛链接：2024年大学生计算机大赛决赛-个人赛 比赛时间：2024.11.17 U503552 村庄的友谊在一个遥远的村庄里，村民们的契合度是一个重要的特征。每个村民都有一个契合度，契合度的值为 $1$ 到 $n$ 之间的任意整数。村民们之间的友谊是基于他们的契合度：只有当两个村民的契合度相乘的结果是质数时，他们才能成为朋友，否则他们就是陌生人，即使他们可能有相同的朋友。 现在，村庄的长老希望了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024校计算机大赛题解">
+<meta property="og:url" content="https://jcheng352.github.io/2024/11/18/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E9%A2%98%E8%A7%A3/2024%E6%A0%A1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%A7%E8%B5%9B%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:site_name" content="Jcheng&#39;s Blog">
+<meta property="og:description" content="比赛链接：2024年大学生计算机大赛决赛-个人赛 比赛时间：2024.11.17 U503552 村庄的友谊在一个遥远的村庄里，村民们的契合度是一个重要的特征。每个村民都有一个契合度，契合度的值为 $1$ 到 $n$ 之间的任意整数。村民们之间的友谊是基于他们的契合度：只有当两个村民的契合度相乘的结果是质数时，他们才能成为朋友，否则他们就是陌生人，即使他们可能有相同的朋友。 现在，村庄的长老希望了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/09/26/5NTg8KWyUs7QvIL.jpg">
+<meta property="article:published_time" content="2024-11-18T14:03:18.000Z">
+<meta property="article:modified_time" content="2024-11-23T07:08:28.589Z">
+<meta property="article:author" content="Jcheng">
+<meta property="article:tag" content="算法竞赛题解">
+<meta property="article:tag" content="校计算机大赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/09/26/5NTg8KWyUs7QvIL.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jcheng352.github.io/2024/11/18/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E9%A2%98%E8%A7%A3/2024%E6%A0%A1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%A7%E8%B5%9B%E9%A2%98%E8%A7%A3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2024校计算机大赛题解',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-23 15:08:28'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2024/09/26/5NTg8KWyUs7QvIL.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-mountain-sun"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/ToDo/"><i class="fa-fw fas fa-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 网址收藏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Jcheng's Blog"><span class="site-name">Jcheng's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-mountain-sun"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/ToDo/"><i class="fa-fw fas fa-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 网址收藏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">2024校计算机大赛题解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-18T14:03:18.000Z" title="发表于 2024-11-18 22:03:18">2024-11-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-23T07:08:28.589Z" title="更新于 2024-11-23 15:08:28">2024-11-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/">算法竞赛</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2024校计算机大赛题解"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="比赛链接："><a href="#比赛链接：" class="headerlink" title="比赛链接："></a>比赛链接：</h1><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/contest/214100">2024年大学生计算机大赛决赛-个人赛</a></p>
+<p>比赛时间：2024.11.17</p>
+<h1 id="U503552-村庄的友谊"><a href="#U503552-村庄的友谊" class="headerlink" title="U503552 村庄的友谊"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U503552">U503552 村庄的友谊</a></h1><p>在一个遥远的村庄里，村民们的契合度是一个重要的特征。每个村民都有一个契合度，契合度的值为 $1$ 到 $n$ 之间的任意整数。村民们之间的友谊是基于他们的契合度：只有当两个村民的契合度相乘的结果<strong>是质数</strong>时，他们才能成为朋友，否则他们就是陌生人，即使他们可能有相同的朋友。</p>
+<p>现在，村庄的长老希望了解村庄中有多少对<strong>不同</strong>的<strong>陌生人</strong>。请你帮助长老计算出来。</p>
+<p><strong>输入格式</strong></p>
+<ul>
+<li>第一行输入一个整数 $n\ (1 ≤ n ≤ 5*10^5)$，表示村民的数量。</li>
+<li>第二行输入 $n$ 个整数，表示每个村民的契合度，契合度的值在 $1$ 到 $5*10^5$ 之间。</li>
+</ul>
+<p><strong>输出格式</strong></p>
+<p>输出一个整数，表示村庄中有多少对<strong>不同</strong>的<strong>陌生人</strong>。</p>
+<p><strong>数据范围</strong></p>
+<p>对于 $20%$ 的数据，$1 &lt;&#x3D; n &lt;&#x3D; 10$</p>
+<p>对于 $40%$ 的数据，$1 &lt;&#x3D; n &lt;&#x3D; 1000$</p>
+<p>对于 $100%$ 的数据，$1 &lt;&#x3D; n &lt;&#x3D; 500000$</p>
+<blockquote>
+<p>题解：</p>
+<p>一个质数只能被1和它本身整除。因此，如果两个村民的契合度相乘为质数，则其中一个村民的契合度必须为1，另一个村民的契合度必须为这个质数。契合度为1的村民与其他所有质数的村民都是朋友。</p>
+<ol>
+<li>统计契合度为1的村民数量 <code>countOnes</code>。</li>
+<li>统计契合度不为1的村民数量 <code>countprime</code>。</li>
+<li>计算陌生人对数：陌生人对数 &#x3D; 总对数 - 朋友对数。</li>
+<li>总对数可以通过组合公式 <code>C(n, 2) = n * (n - 1) / 2</code> 计算。</li>
+<li>朋友对数等于契合度为1的村民与其他所有非1的村民之间的配对数，即 <code>count_ones * countprime</code>。</li>
+</ol>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">long</span> <span class="type">long</span> MAXN = <span class="number">500000</span>; <span class="comment">// 定义最大数字范围</span></span><br><span class="line"><span class="type">bool</span> prime[MAXN + <span class="number">1</span>]; <span class="comment">// 用于标记数字是否为质数的数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化质数数组的函数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ai</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 使用埃拉托斯特尼筛法（Sieve of Eratosthenes）来标记质数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">long</span> <span class="type">long</span> p = <span class="number">2</span>; p * p &lt;= MAXN; p++) <span class="comment">// 只需要遍历到sqrt(MAXN)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (prime[p]) <span class="comment">// 如果p是质数</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">long</span> <span class="type">long</span> i = p * p; i &lt;= MAXN; i += p) <span class="comment">// 将p的所有倍数标记为非质数</span></span><br><span class="line">            &#123;</span><br><span class="line">                prime[i] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 计算陌生人数量的函数</span></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">solve</span><span class="params">(<span class="type">long</span> <span class="type">long</span> n, vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; &amp;person)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> cntOne = <span class="number">0</span>; <span class="comment">// 记录数字1的数量</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> cntprime = <span class="number">0</span>; <span class="comment">// 记录质数的数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">long</span> <span class="type">long</span> i : person) <span class="comment">// 遍历每个人的数字</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">1</span>) <span class="comment">// 如果数字是1</span></span><br><span class="line">            cntOne++;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (prime[i]) <span class="comment">// 如果数字是质数</span></span><br><span class="line">            cntprime++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> total = n * (n - <span class="number">1</span>) / <span class="number">2</span>; <span class="comment">// 计算总的对数（即C(n, 2)）</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> friends = cntOne * cntprime; <span class="comment">// 计算朋友对的数量（1和质数组成的对）</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> strangers = total - friends; <span class="comment">// 计算陌生人的数量（剩下的对数）</span></span><br><span class="line">    <span class="keyword">return</span> strangers;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> n; <span class="comment">// 人数</span></span><br><span class="line">    cin &gt;&gt; n; <span class="comment">// 输入人数</span></span><br><span class="line">    <span class="built_in">fill</span>(prime, prime + MAXN + <span class="number">1</span>, <span class="number">1</span>); <span class="comment">// 初始化质数数组为1（假设所有数字都是质数）</span></span><br><span class="line">    prime[<span class="number">0</span>] = prime[<span class="number">1</span>] = <span class="number">0</span>; <span class="comment">// 0和1不是质数</span></span><br><span class="line">    <span class="built_in">ai</span>(); <span class="comment">// 调用函数初始化质数数组</span></span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="title">person</span><span class="params">(n)</span></span>; <span class="comment">// 存储每个人的数字</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">long</span> <span class="type">long</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; person[i]; <span class="comment">// 输入每个人的数字</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">solve</span>(n, person); <span class="comment">// 输出陌生人的数量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="U504030-再多一些0"><a href="#U504030-再多一些0" class="headerlink" title="U504030 再多一些0"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U504030">U504030 再多一些0</a></h1><p>小T有一个数 $n$，现在他可以从 $[1,m]$ 中选一个数字 $k$，然后把 $n$ 变成 $k<em>n$ ，由于小T非常喜欢数字0，所以他下意识的认为一个数的<strong>后缀0个数</strong>越多越好，请你找到一个最大的 $k$ ，使得 $k</em>n$ 的后缀0个数最多。</p>
+<p><strong>后缀0个数</strong>：就是指一个数字末尾有多少个0，例如1992000这个数字末尾有3个0，所以它的后缀0个数就为3。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>输入两个正整数 $n,m$。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一个整数，表示能选到的最大 $k$。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 43</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">40</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><h2 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h2><p>在本题中，当 $k&#x3D;40$ 时得到 $5 \times 40 &#x3D; 200$，此时后缀0数量最多且 $k$ 最大。</p>
+<h2 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h2><p>对于$100%$的数据，$1 \le n,m \le 10^9$。</p>
+<blockquote>
+<p>2和5相乘为10，每有一对2和5则多一个0。</p>
+<p>若n中有a个2，b个5，则n中后缀0的数量为min(a, b)（a, b的较小值）。</p>
+<p>因为m最大为10^9，枚举[1, m]中的每个数作为k显然会超时。</p>
+<p>考虑枚举k中有多少个2和多少个5，因为在10^9内，一个数最多含有log_2 10^9个2或者log_5 10^9个5，数量不会很多，所以这样枚举不会超时。</p>
+<p>如果当前枚举k中有c个2和d个5，k*n的后缀0个数为min(a+c, b+d)。</p>
+<p>按题目要求保留取后缀0最多的，且最大的k即为答案。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决问题的函数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算n中2和5的因子个数</span></span><br><span class="line">    <span class="type">int</span> c2 = <span class="number">0</span>, c5 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        c2++;</span><br><span class="line">        n /= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (n % <span class="number">5</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        c5++;</span><br><span class="line">        n /= <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> k2 = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> ma = <span class="number">-1</span>, ans = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 枚举所有可能的2的幂次k2</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; k2 &lt;= m; i++) &#123;</span><br><span class="line">        <span class="type">int</span> k5 = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 枚举所有可能的5的幂次k5，使得k2*k5不超过m</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; k2 * k5 &lt;= m; j++) &#123;</span><br><span class="line">            <span class="type">int</span> v2 = c2 + i;  <span class="comment">// 当前2的因子总数</span></span><br><span class="line">            <span class="type">int</span> v5 = c5 + j;  <span class="comment">// 当前5的因子总数</span></span><br><span class="line">            <span class="type">int</span> v10 = <span class="built_in">min</span>(v2, v5);  <span class="comment">// 10的因子数由较少的那个决定</span></span><br><span class="line"></span><br><span class="line">            <span class="type">int</span> now = k2 * k5;</span><br><span class="line">            now = m / now * now;  <span class="comment">// 计算当前值在m范围内的最大倍数值</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 更新最大10的因子数和对应的答案</span></span><br><span class="line">            <span class="keyword">if</span> (v10 &gt; ma) &#123;</span><br><span class="line">                ma = v10;</span><br><span class="line">                ans = now;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (v10 == ma) &#123;</span><br><span class="line">                ans = <span class="built_in">max</span>(ans, now);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            k5 *= <span class="number">5</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        k2 *= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> T = <span class="number">1</span>;  <span class="comment">// 测试用例数量，默认为1</span></span><br><span class="line">    <span class="comment">// cin &gt;&gt; T;  // 如果需要多组测试数据，取消此行注释</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (T--) &#123;</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="U505285-开光灯"><a href="#U505285-开光灯" class="headerlink" title="U505285 开光灯"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/U505285?contestId=214100">U505285 开光灯</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>现在有$n$个灯泡排成一行，分别编号$ 1 $ ~ $ n $，灯泡默认都是关闭的，而小T手速惊人，他每次可以选择一个区间$ [l,r] $，然后改变这区间内的所有灯泡的状态，如果此时灯泡是打开的，则变关闭，否则从关闭变打开。现在你已经知道小T进行了$ m $次操作，但小$ T $想考考你，如果此时小$ T $第$ i $个操作不执行的话，此时多少盏灯泡是打开的。</p>
+<h2 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行 两个整数$ n ,m $ 表示灯泡的数量和小$ T $操作的次数。</p>
+<p>接下来$ m $行，每行两个整数$ l,r $ 表示小$ T $操作的区间。</p>
+<h2 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h2><p>一行$ m $个数字,每个数字之间用空格隔开，表示小$ T $第$ i $个操作不执行的话此时打开着的灯泡数。</p>
+<h2 id="样例-1-1"><a href="#样例-1-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1-1"><a href="#样例输入-1-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5 2</span><br><span class="line">1 5</span><br><span class="line">2 4</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-1-1"><a href="#样例输出-1-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 5</span><br></pre></td></tr></table></figure>
+
+<h2 id="样例-2"><a href="#样例-2" class="headerlink" title="样例 #2"></a>样例 #2</h2><h3 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入 #2"></a>样例输入 #2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">10 4</span><br><span class="line">1 10</span><br><span class="line">2 4</span><br><span class="line">3 8</span><br><span class="line">6 9</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-2"><a href="#样例输出-2" class="headerlink" title="样例输出 #2"></a>样例输出 #2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 6 3 5</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h2><p>第一个样例，当第一个操作不做时，此时只有$2,3,4$打开着，故答案为$3$，当第二个操作不做时，此时灯全部打开着，故答案为$5$。</p>
+<h2 id="数据规模与约定"><a href="#数据规模与约定" class="headerlink" title="数据规模与约定"></a><strong>数据规模与约定</strong></h2><p>保证所有测试点$ 1\le l \le r \le n $。</p>
+<p>对于$ 20%$的数据 , 保证 $1 \le n, m \le 500 $，并且每个操作中$ l $和$ r $都相等，即操作的都是同一段区间，不保证$ l &#x3D; r $。	</p>
+<p>对于$ 60%$的数据 , 保证 $ 1 \le n, m \le 5000 $。	</p>
+<p>对于 $100 %$ 的数据，保证$1 \le n, m \le 10^6 $。</p>
+<blockquote>
+<p>解决这个问题，我们需要采用一种高效的方法来处理大量的查询和更新操作。直接模拟每个操作会超时，因为最坏情况下时间复杂度可能达到𝑂(𝑛×𝑚)<em>O</em>(<em>n</em>×<em>m</em>)，这在给定的数据范围内是不可接受的。因此，我们考虑使用差分数组的思想来优化我们的算法。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>初始化差分数组</strong>：创建一个长度为𝑛+2<em>n</em>+2的差分数组<code>diff</code>，用来记录每个位置的变化情况。额外的两个位置是为了避免边界条件的特殊处理。</li>
+<li><strong>应用所有操作</strong>：遍历每个操作，根据操作的区间[𝑙,𝑟][<em>l</em>,<em>r</em>]对差分数组进行更新。具体来说，增加<code>diff[l]</code>，减少<code>diff[r+1]</code>。这样做的目的是为了标记区间的开始和结束，方便后续计算每个位置的实际状态。</li>
+<li><strong>计算最终状态</strong>：通过前缀和的方式计算每个位置的最终状态。这一步需要遍历差分数组，累加值来确定每个灯泡是否开启。</li>
+<li><strong>模拟移除每个操作</strong>：再次遍历每个操作，假设当前操作没有发生，重新计算差分数组，并根据更新后的差分数组计算新的灯泡状态。统计开启的灯泡数量，并将结果存储起来。</li>
+<li><strong>输出结果</strong>：最后输出存储的结果。</li>
+</ol>
+<h3 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h3><ul>
+<li>使用一个额外的变量来记录当前开启的灯泡总数，以便快速计算移除某个操作后的影响。</li>
+<li>在模拟移除每个操作时，只需调整该操作对差分数组的影响，然后基于当前的开启灯泡总数和受影响的区间长度来计算新的开启灯泡数。</li>
+</ul>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决问题的函数</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">solve</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m, <span class="type">const</span> vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;&amp; operations)</span> </span>&#123;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">diff</span><span class="params">(n + <span class="number">2</span>, <span class="number">0</span>)</span></span>;  <span class="comment">// 差分数组，长度为 n+2，以避免边界条件的特殊处理</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 应用所有操作到差分数组</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; op : operations) &#123;</span><br><span class="line">        <span class="type">int</span> l = op.first;</span><br><span class="line">        <span class="type">int</span> r = op.second;</span><br><span class="line">        diff[l] += <span class="number">1</span>;  <span class="comment">// 区间开始位置加1</span></span><br><span class="line">        diff[r + <span class="number">1</span>] -= <span class="number">1</span>;  <span class="comment">// 区间结束位置的下一个位置减1</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 计算每个灯泡的最终状态</span></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">state</span><span class="params">(n + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="type">int</span> on_count = <span class="number">0</span>;  <span class="comment">// 记录最终开启的灯泡数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        state[i] = state[i - <span class="number">1</span>] + diff[i];  <span class="comment">// 前缀和计算每个位置的最终状态</span></span><br><span class="line">        <span class="keyword">if</span> (state[i] % <span class="number">2</span> == <span class="number">1</span>) &#123;  <span class="comment">// 如果灯泡是开启的</span></span><br><span class="line">            on_count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; results;  <span class="comment">// 存储每个操作移除后开启的灯泡数量</span></span><br><span class="line">    <span class="comment">// 模拟移除每个操作并计算开启的灯泡数量</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; op : operations) &#123;</span><br><span class="line">        <span class="type">int</span> l = op.first;</span><br><span class="line">        <span class="type">int</span> r = op.second;</span><br><span class="line">        <span class="comment">// 计算移除该操作后的影响</span></span><br><span class="line">        <span class="type">int</span> change = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (state[l] % <span class="number">2</span> == <span class="number">1</span>) &#123;  <span class="comment">// 如果该操作原本是关闭灯泡的</span></span><br><span class="line">            change = (r - l + <span class="number">1</span>);  <span class="comment">// 移除后应增加 (r - l + 1) 个开启的灯泡</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;  <span class="comment">// 如果该操作原本是开启灯泡的</span></span><br><span class="line">            change = -(r - l + <span class="number">1</span>);  <span class="comment">// 移除后应减少 (r - l + 1) 个开启的灯泡</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        results.<span class="built_in">push_back</span>(on_count + change);  <span class="comment">// 计算并存储结果</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> results;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;  <span class="comment">// 读取灯泡数量和操作次数</span></span><br><span class="line">    vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; <span class="built_in">operations</span>(m);  <span class="comment">// 存储所有操作</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        cin &gt;&gt; operations[i].first &gt;&gt; operations[i].second;  <span class="comment">// 读取每个操作的区间</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; results = <span class="built_in">solve</span>(n, m, operations);  <span class="comment">// 调用 solve 函数计算结果</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> res : results) &#123;</span><br><span class="line">        cout &lt;&lt; res &lt;&lt; <span class="string">&quot; &quot;</span>;  <span class="comment">// 输出每个操作移除后开启的灯泡数量</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://jcheng352.github.io">Jcheng</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://jcheng352.github.io/2024/11/18/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E9%A2%98%E8%A7%A3/2024%E6%A0%A1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%A7%E8%B5%9B%E9%A2%98%E8%A7%A3/">https://jcheng352.github.io/2024/11/18/算法竞赛题解/2024校计算机大赛题解/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jcheng352.github.io" target="_blank">Jcheng's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E9%A2%98%E8%A7%A3/">算法竞赛题解</a><a class="post-meta__tags" href="/tags/%E6%A0%A1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%A7%E8%B5%9B/">校计算机大赛</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2024/09/26/5NTg8KWyUs7QvIL.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/11/23/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/AcWing%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" title="AcWing算法基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">AcWing算法基础</div></div></a></div><div class="next-post pull-right"><a href="/2024/11/07/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E6%B3%95/" title="高精度加减乘除法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">高精度加减乘除法</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2024/09/26/5NTg8KWyUs7QvIL.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jcheng</div><div class="author-info__description">事已至此 先吃饭吧</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Jcheng352/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://jcheng352.github.io/img/weixin.jpg" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #1eca0c;"></i></a><a class="social-icon" href="https://jcheng352.github.io/img/QQ.jpg" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #4492e7;"></i></a><a class="social-icon" href="mailto:1825042377@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">记录学习生活</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AF%94%E8%B5%9B%E9%93%BE%E6%8E%A5%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">比赛链接：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#U503552-%E6%9D%91%E5%BA%84%E7%9A%84%E5%8F%8B%E8%B0%8A"><span class="toc-number">2.</span> <span class="toc-text">U503552 村庄的友谊</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#U504030-%E5%86%8D%E5%A4%9A%E4%B8%80%E4%BA%9B0"><span class="toc-number">3.</span> <span class="toc-text">U504030 再多一些0</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B-1"><span class="toc-number">3.3.</span> <span class="toc-text">样例 #1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1"><span class="toc-number">3.3.1.</span> <span class="toc-text">样例输入 #1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1"><span class="toc-number">3.3.2.</span> <span class="toc-text">样例输出 #1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E7%A4%BA"><span class="toc-number">3.4.</span> <span class="toc-text">提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%A7%A3%E9%87%8A"><span class="toc-number">3.5.</span> <span class="toc-text">样例解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">3.6.</span> <span class="toc-text">数据范围</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#U505285-%E5%BC%80%E5%85%89%E7%81%AF"><span class="toc-number">4.</span> <span class="toc-text">U505285 开光灯</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">4.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">4.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">4.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B-1-1"><span class="toc-number">4.4.</span> <span class="toc-text">样例 #1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-1-1"><span class="toc-number">4.4.1.</span> <span class="toc-text">样例输入 #1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-1-1"><span class="toc-number">4.4.2.</span> <span class="toc-text">样例输出 #1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B-2"><span class="toc-number">4.5.</span> <span class="toc-text">样例 #2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5-2"><span class="toc-number">4.5.1.</span> <span class="toc-text">样例输入 #2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA-2"><span class="toc-number">4.5.2.</span> <span class="toc-text">样例输出 #2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E7%A4%BA-1"><span class="toc-number">4.6.</span> <span class="toc-text">提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A"><span class="toc-number">4.7.</span> <span class="toc-text">数据规模与约定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">4.7.1.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82"><span class="toc-number">4.7.2.</span> <span class="toc-text">实现细节</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/23/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/AcWing%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" title="AcWing算法基础">AcWing算法基础</a><time datetime="2024-11-23T07:05:24.000Z" title="发表于 2024-11-23 15:05:24">2024-11-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/18/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E9%A2%98%E8%A7%A3/2024%E6%A0%A1%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A4%A7%E8%B5%9B%E9%A2%98%E8%A7%A3/" title="2024校计算机大赛题解">2024校计算机大赛题解</a><time datetime="2024-11-18T14:03:18.000Z" title="发表于 2024-11-18 22:03:18">2024-11-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/07/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E6%B3%95/" title="高精度加减乘除法">高精度加减乘除法</a><time datetime="2024-11-07T08:39:16.000Z" title="发表于 2024-11-07 16:39:16">2024-11-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/05/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E6%A6%82%E5%BF%B5%E5%92%8C%E6%96%B9%E6%B3%95/" title="测试概念和方法">测试概念和方法</a><time datetime="2024-11-05T02:10:42.000Z" title="发表于 2024-11-05 10:10:42">2024-11-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/01/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/STL%E5%BA%93%E7%AC%94%E8%AE%B0/" title="STL标准模板库笔记">STL标准模板库笔记</a><time datetime="2024-11-01T13:52:02.000Z" title="发表于 2024-11-01 21:52:02">2024-11-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By Jcheng</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><div class="aplayer no-destroy" data-id="12649832310" data-server="netease" data-type="playlist" data-fixed="true" data-lrctype="0"> </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
